@@ -51,8 +51,11 @@ Rails.application.routes.draw do
         get :generate_pdf_dialog
         get :toggle_notifications_dialog
         post :toggle_notifications
-        get :presentation
       end
+
+      resource :presentation,
+               only: %i[show edit],
+               controller: "meeting_presentation"
     end
 
     resources :recurring_meetings do
