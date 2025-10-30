@@ -74,3 +74,6 @@ OpenProject::FeatureDecisions.add :new_project_overview,
 
 OpenProject::FeatureDecisions.add :wp_activity_tab_lazy_pagination,
                                   description: "Enables lazy pagination for the activity tab."
+
+OpenProject::FeatureDecisions.add :meetings_presentation_mode,
+                                  description: "Enables presentation mode for meetings."
