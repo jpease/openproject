@@ -119,6 +119,12 @@ tr:
         hide_inactive_folders: 'Hide Inactive Folders Step:'
         remote_folders: 'Read contents of the group folder:'
         rename_project_folder: 'Yönetilen proje klasörü isimlendirmesi:'
+      sharepoint_sync_service:
+        create_folder: 'Yönetilen Proje Klasörü Oluşturma:'
+        ensure_root_folder_permissions: 'Temel Klasör İzinlerini Ayarlayın:'
+        hide_inactive_folders: 'Hide Inactive Folders Step:'
+        remote_folders: 'Read contents of the group folder:'
+        rename_project_folder: 'Yönetilen proje klasörü isimlendirmesi:'
     errors:
       messages:
         error: An unexpected error occurred. Please check OpenProject logs for more information or contact an administrator
@@ -171,6 +177,23 @@ tr:
             remote_folders:
               request_error: OpenProject could not access your drive %{drive_id}. Please check if your storage configuration is correct.
             rename_project_folder:
+              conflict: OpenProject could not rename the folder %{current_path} to %{project_folder_name} as a folder with the same name already exists.
+              forbidden: OpenProject does not have access to %{current_path} in order to rename it.
+              not_found: "%{current_path} bulunamadı."
+            set_folders_permissions:
+              permission_not_set: '%{path} üzerinde izinler ayarlanamadı.'
+          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information.
+          not_allowed: OpenProject'in OneDrive sürücünüze erişmesine izin verilmedi. Lütfen Azure Uygulamasında ayarlanan izinleri kontrol edin.
+          unauthorized: OpenProject OneDrive ile eşitlenemedi. Lütfen depolama alanınızı ve Azure Uygulaması yapılandırmanızı kontrol edin.
+          user_does_not_exist: "%{user} does not exist in Nextcloud."
+        sharepoint_sync_service:
+          attributes:
+            create_folder:
+              conflict: The %{folder_name} already exists on %{parent_location}.
+              not_found: "%{parent_location} bulunamadı."
+            hide_inactive_folders:
+              permission_not_set: '%{path} üzerinde izinler ayarlanamadı.'
+            rename_project_folder:
               conflict: OpenProject could not rename the folder %{current_path} to %{project_folder_name} as a folder with the same name already exists
               forbidden: OpenProject does not have access to %{current_path} in order to rename it.
               not_found: "%{current_path} bulunamadı."
@@ -178,6 +201,7 @@ tr:
               permission_not_set: '%{path} üzerinde izinler ayarlanamadı.'
           error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information
           not_allowed: OpenProject'in OneDrive sürücünüze erişmesine izin verilmedi. Lütfen Azure Uygulamasında ayarlanan izinleri kontrol edin.
+          not_found: OpenProject could not access your library %{drive_name}. Please check you Sharepoint site document libraries.
           unauthorized: OpenProject OneDrive ile eşitlenemedi. Lütfen depolama alanınızı ve Azure Uygulaması yapılandırmanızı kontrol edin.
           user_does_not_exist: "%{user} does not exist in Nextcloud."
         upload_link_service:
@@ -275,7 +299,7 @@ tr:
           drive_id_exists: Sürücü mevcut
           drive_id_format: Sürücü Kimliği biçimi
           header: Yapılandırma
-          host: Ana Bilgisayar URL'si
+          host: Barındırıcı URL'si
           host_url_accessible: Ana bilgisayar URL'si erişilebilir
           storage_configured: Yapılandırma tamamlandı
           tenant_id: Kiracı Kimliği
@@ -412,7 +436,7 @@ tr:
     label_edit_token_exchange: Anahtar değişimi yapılandırmasını düzenleme
     label_existing_manual_folder: Elle yönetilen izinlere sahip mevcut klasör
     label_file_storage: Dosya deposu
-    label_host: Barındırıcı URL'si
+    label_host: Ana Bilgisayar URL'si
     label_inactive: Etkin değil
     label_managed_project_folders:
       application_password: Uygulama şifresi
@@ -514,7 +538,7 @@ tr:
         label: Use access token obtained during user log in
       manual:
         helptext: OpenProject will exchange a token with the identity provider for the given audience.
-        label: Manually specify audience for which to exchange access token
+        label: Manually specify audience for which to exchange access token (Recommended)
     storage_list_blank_slate:
       description: Onları burada görmek için bir depolama ekleyin.
       heading: Henüz hiç depolamanız yok.

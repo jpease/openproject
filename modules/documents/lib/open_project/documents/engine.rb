@@ -53,7 +53,7 @@ module OpenProject::Documents
 
       project_module :documents do |_map|
         permission :view_documents,
-                   { documents: %i[index show download],
+                   { documents: %i[index search show download],
                      "documents/menus": %i[show] },
                    permissible_on: :project
         permission :manage_documents,
@@ -86,6 +86,10 @@ module OpenProject::Documents
 
     add_api_path :attachments_by_document do |id|
       "#{document(id)}/attachments"
+    end
+
+    add_api_path :prepare_attachments_by_document do |id|
+      "#{document(id)}/attachments/prepare"
     end
 
     add_api_endpoint "API::V3::Root" do

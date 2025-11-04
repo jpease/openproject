@@ -299,9 +299,16 @@ class WorkPackages::SetAttributesService < BaseServices::SetAttributes
     # Better return and keep dates unified to have only one meaningful error.
     return if work_package_now_milestone?
 
-    # do a reschedule call to get the work package dates from the rescheduled children
+    # do a reschedule call to get the work package dates from the (potentially)
+    # rescheduled children.
+    #
+    # This happens for instance when a work package with a child gets a new
+    # parent having a predecessor. If the child is in automatic mode, it could
+    # be forced to move to a date after the grandparent's predecessor, forcing
+    # the parent to also move to the same dates. These dates are known only
+    # after the child is properly rescheduled.
     service = WorkPackages::SetScheduleService.new(user: User.current, work_package:, switching_to_automatic_mode: [work_package])
-    service.call(work_package.changes.keys.map(&:to_sym)).result
+    service.call(work_package.changed_attribute_keys).result
   end
 
   def update_dates_from_self
@@ -456,28 +463,8 @@ class WorkPackages::SetAttributesService < BaseServices::SetAttributes
     instantiate_contract(work_package, user).assignable_statuses(include_default: true)
   end
 
-  def min_child_date
-    children_dates.min
-  end
-
-  def children_duration
-    max = max_child_date
-
-    return unless max
-
-    days.duration(min_child_date, max_child_date)
-  end
-
   def days
     WorkPackages::Shared::Days.for(work_package)
-  end
-
-  def max_child_date
-    children_dates.max
-  end
-
-  def children_dates
-    @children_dates ||= work_package.children.pluck(:start_date, :due_date).flatten.compact
   end
 
   def parent_start_earlier_than_due?

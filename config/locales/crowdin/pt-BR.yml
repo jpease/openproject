@@ -164,9 +164,9 @@ pt-BR:
         title: "Tabela de tokens de acesso"
     workflows:
       tabs:
-        default_transitions: "Default transitions"
-        user_author: "User is author"
-        user_assignee: "User is assignee"
+        default_transitions: "Transições padrão"
+        user_author: "Usuário é autor"
+        user_assignee: "Usuário é responsável"
   authentication:
     login_and_registration: "Entrar e cadastrar"
   announcements:
@@ -321,7 +321,7 @@ pt-BR:
     reorder_alphabetical: "Reorganizar valores em ordem alfabética"
     reorder_confirmation: "Aviso: A ordem atual dos valores disponíveis será perdida. Continuar?"
     placeholder_version_select: "Primeiro é necessária a seleção do pacote de trabalho ou projeto"
-    calculated_field_not_editable: "Non-editable attribute. This value is calculated automatically."
+    calculated_field_not_editable: "Atributo não editável. O valor é calculado automaticamente."
     instructions:
       is_required: "Marcar o campo personalizado como obrigatório. Isto tornará obrigatório o preenchimento do campo ao criar novos recursos ou ao atualizar recursos existentes."
       is_required_for_project: "Marque esta opção para ativar este atributo e torná-lo obrigatório em todos os projetos. Este atributo não pode ser desativado em projetos individuais."
@@ -348,8 +348,8 @@ pt-BR:
   concatenation:
     single: "ou"
   danger_dialog:
-    confirmation_live_message_checked: "The button to proceed is now active."
-    confirmation_live_message_unchecked: "The button to proceed is now inactive. You need to tick the checkbox to continue."
+    confirmation_live_message_checked: "O botão para prosseguir agora está ativo."
+    confirmation_live_message_unchecked: "O botão para prosseguir está desativado. É necessário marcar a caixa de seleção para continuar."
   op_dry_validation:
     or: "ou"
     errors:
@@ -528,8 +528,8 @@ pt-BR:
       versions:
         no_results_title_text: Atualmente, não há versões para o projeto.
         no_results_content_text: Criar uma nova versão
-        work_packages_graph: Work packages graph
-        show_work_packages: Show work packages
+        work_packages_graph: Gráfico de pacotes de trabalho
+        show_work_packages: Exibir pacotes de trabalho
       storage:
         no_results_title_text: Não há espaço adicional gravado em disco que seja consumido por este projeto.
       work_package_priorities:
@@ -664,73 +664,73 @@ pt-BR:
       no_results_title_text: Atualmente, este usuário não é um membro de um projeto.
     open_profile: "Abrir perfil"
     invite_user_modal:
-      invite: "Invite"
+      invite: "Convidar"
       title:
-        invite: "Invite user"
-        invite_to_project: "Invite %{type} to %{project}"
-        invite_principal_to_project: "Invite %{principal} to %{project}"
+        invite: "Convidar usuário"
+        invite_to_project: "Convide %{type} para %{project}"
+        invite_principal_to_project: "Convide %{principal} para %{project}"
       project:
-        label: "Project"
-        required: "Please select a project"
-        next_button: "Next"
-        no_results: "No projects were found"
-        no_invite_rights: "You are not allowed to invite members to this project"
+        label: "Projeto"
+        required: "Selecione um projeto"
+        next_button: "Próxima"
+        no_results: "Nenhum projeto foi encontrado"
+        no_invite_rights: "Você não tem permissão para convidar membros para este projeto"
       type:
-        required: "Please select the type to be invited"
+        required: "Selecione o tipo a ser convidado"
         user:
-          title: "Invite user to %{project_name}"
-          description: "Permissions based on the assigned role in the selected project"
+          title: "Convidar usuário para %{project_name}"
+          description: "Permissões baseadas no papel atribuído no projeto selecionado"
         group:
-          title: "Invite group to %{project_name}"
-          description: "Permissions based on the assigned role in the selected project"
+          title: "Convidar grupo para %{project_name}"
+          description: "Permissões baseadas no papel atribuído no projeto selecionado"
         placeholder_user:
-          title: "Add placeholder user to %{project_name}"
-          title_no_ee: "Placeholder user (Enterprise edition only add-on)"
-          description: "Has no access to the project and no emails are sent out."
-        already_member_message: "Already a member of %{project}"
+          title: "Adicionar usuário de espaço reservado a %{project_name}"
+          title_no_ee: "Usuário de espaço reservado (complemento apenas da edição Enterprise)"
+          description: "Não possui acesso ao projeto e nenhum e-mail é enviado."
+        already_member_message: "Já é um membro de %{project}"
       principal:
-        no_results_user: "No users were found"
-        invite_user: "Invite:"
-        no_results_placeholder: "No placeholders were found"
-        create_new_placeholder: "Create new placeholder:"
-        no_results_group: "No groups were found"
-        invite_to_project: "Invite to %{project_name}"
+        no_results_user: "Nenhum usuário foi encontrado"
+        invite_user: "Convite:"
+        no_results_placeholder: "Nenhum espaço reservado encontrado"
+        create_new_placeholder: "Criar novo espaço reservado:"
+        no_results_group: "Nenhum grupo encontrado"
+        invite_to_project: "Convidar para %{project_name}"
         required:
-          user: "Please select a user"
-          placeholder: "Please select a placeholder"
-          group: "Please select a group"
+          user: "Selecione um usuário"
+          placeholder: "Selecione um espaço reservado"
+          group: "Selecione um grupo"
       role:
-        label: "Role in %{project}"
-        no_roles_found: "No roles were found"
+        label: "Papel em %{project}"
+        no_roles_found: "Nenhum papel encontrado"
         description: >
-          This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. [Learn more about roles and permissions.](docs_url)
-        required: "Please select a role"
+          Este é a função que o usuário receberá ao entrar no seu projeto. A função define quais ações ele poderá realizar e quais informações poderá visualizar. [Saiba mais sobre funções e permissões.](docs_url)
+        required: "Selecione um papel"
       message:
-        label: "Invitation message"
-        description: "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started."
+        label: "Mensagem de convite"
+        description: "Enviaremos um e-mail para o usuário, à qual você pode adicionar uma mensagem pessoal por aqui. Uma explicação para o convite pode se útil, ou talvez algumas informações sobre o projeto para ajudá-lo a começar."
       summary:
-        next_button: "Send invitation"
+        next_button: "Enviar Convite"
       success_message:
-        user: "The user can now log in to access %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
-        placeholder_user: "The placeholder can now be used in %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
-        group: "The group is now a part of %{project}. Meanwhile you can already plan with that group and assign work packages for instance."
+        user: "O usuário agora pode entrar para acessar %{project}. Enquanto isso, você já pode planejar com este usuário e atribuir pacotes de trabalho por exemplo."
+        placeholder_user: "O espaço reservado agora pode ser usado em %{project}. Enquanto isso, você já pode planejar com esse usuário e, por exemplo, atribuir pacotes de trabalho."
+        group: "O grupo agora faz parte de %{project}. Enquanto isso, você já pode planejar com este grupo e atribuir pacotes de trabalho por exemplo."
   page:
     text: "Texto"
   placeholder_users:
     right_to_manage_members_missing: >
-      Você não pode excluir o usuário do espaço reservado. Você não possui direito de gerenciar membros para todos os projetos que o usuário do espaço reserva é membro.
+      Você não tem permissão para excluir o usuário de espaço reservado. Você também não possui o direito de gerenciar membros em todos os projetos dos quais esse usuário de espaço reservado faz parte.
     delete_tooltip: "Excluir usuário de espaço reserva"
     deletion_info:
-      heading: "Excluir usuário do espaço reservado %{name}"
+      heading: "Excluir usuário de espaço reservado %{name}"
       data_consequences: >
         Todas as ocorrências do usuário de espaço reservado (por exemplo, como responsável, competente ou outros valores de usuário) serão reatribuídas a uma conta chamada "Usuário excluído". Como os dados de todas as contas excluídas são reatribuídos a esta conta, não será possível diferenciar os dados criados por usuários de dados excluídos por outra conta.
       irreversible: "Esta ação é irreversível"
-      confirmation: "Digite o nome de usuário do espaço reservado %{name} para confirmar a exclusão."
+      confirmation: "Digite o nome do usuário de espaço reservado %{name} para confirmar a exclusão."
   priorities:
     edit:
       priority_color_text: |
         Clique para atribuir ou alterar a cor desta prioridade.
-        Ela pode ser usada para destacar pacotes de trabalho na tabela.
+        Pode ser usado para destacar pacotes de trabalho na tabela.
     admin:
       default:
         caption: Definir esta prioridade como padrão substituirá a prioridade padrão anterior.
@@ -1293,8 +1293,8 @@ pt-BR:
         daily_reminders: "Lembretes diários"
         workdays: "Dias úteis"
       users/invitation/form_model:
-        principal_type: "Invitation type"
-        id_or_email: "Name or email address"
+        principal_type: "Tipo de convite"
+        id_or_email: "Nome ou endereço de e-mail"
       version:
         effective_date: "Data de conclusão"
         sharing: "Compartilhamento"
@@ -1768,7 +1768,7 @@ pt-BR:
       notification:
         one: "Notificação"
         other: "Notificações"
-      placeholder_user: "Usuário do espaço reservado"
+      placeholder_user: "Usuário de espaço reservado"
       project:
         one: "Projeto"
         other: "Projetos"
@@ -2103,7 +2103,7 @@ pt-BR:
     copy_options:
       dependencies_label: "Copiar do modelo"
   create_wiki_page: "Criar nova página wiki"
-  create_wiki_page_button: "Página Wiki"
+  create_wiki_page_button: "Página wiki"
   date:
     abbr_day_names:
       - "Dom"
@@ -2301,15 +2301,15 @@ pt-BR:
       baseline_comparison:
         description: Destaque as alterações realizadas nesta lista desde qualquer ponto no passado.
       benefits:
-        description: "Quais são os benefícios da edição Enterprise on-premises?"
+        description: "Quais os benefícios da edição Enterprise Edition local?"
         high_security: "Recursos de segurança"
-        high_security_text: "Autenticação única (SAML, OpenID Connect, CAS), grupos LDAP."
+        high_security_text: "Logon único (SAML, OpenID Connect, CAS), grupos LDAP."
         installation: "Suporte à instalação"
-        installation_text: "Engenheiros de software experientes guiam você por todo o processo de instalação e configuração na sua própria infraestrutura."
+        installation_text: "Engenheiros de software experientes darão orientações durante todo o processo de instalação e configuração em sua própria infraestrutura."
         premium_features: "Complementos Enterprise"
-        premium_features_text: "Quadros ágeis, tema e logo personalizados, gráficos, fluxos de trabalho inteligentes com ações personalizadas, busca por texto completo em arquivos anexos aos pacotes de trabalho e campos personalizados com seleção múltipla."
+        premium_features_text: "Quadros ágeis, tema e logotipo personalizados, gráficos, fluxos de trabalho inteligentes com ações personalizadas, pesquisa de texto completo em anexos de itens de trabalho e campos personalizados com seleção múltipla."
         professional_support: "Suporte profissional"
-        professional_support_text: "Receba suporte confiável e personalizado de engenheiros de suporte sênior com conhecimento especializado para operar o OpenProject em ambientes críticos para os negócios."
+        professional_support_text: "Obtenha suporte confiável e próximo de engenheiros de suporte sênior com conhecimento especializado em operar o OpenProject em ambientes críticos para os negócios."
       work_package_subject_generation:
         description: "Crie assuntos gerados automaticamente com base em atributos e textos referenciados."
       customize_life_cycle:
@@ -2357,7 +2357,7 @@ pt-BR:
       placeholder_users:
         title: Usuários de espaço reservado
         description: >
-          Usuários reservados são uma maneira de atribuir pacotes de trabalho aos usuários que não fazem parte do seu projeto. Eles podem ser úteis em vários cenários; por exemplo, se você precisa acompanhar as tarefas de uma fonte que ainda não foi nomeada ou disponibilizada, ou, se você não deseja dar a esta pessoa acesso ao OpenProject, mas ainda deseja acompanhar as tarefas atribuídas a ela.
+          Usuários de espaço reservado são uma forma de atribuir pacotes de trabalho a pessoas que não fazem parte do seu projeto. Eles podem ser úteis em diversas situações, por exemplo, quando você precisa acompanhar tarefas de um recurso que ainda não foi nomeado ou não está disponível, ou quando não deseja conceder acesso dessa pessoa ao OpenProject, mas ainda quer registrar as tarefas atribuídas a ela.
       internal_comments:
         title: Comentários internos
         description: "Comentários internos permitem que a equipe se comunique de forma privada. Eles são visíveis apenas para papéis específicos do projeto e nunca serão acessíveis publicamente."
@@ -2368,23 +2368,23 @@ pt-BR:
       title:
         one: "Falta um dia para o término do token de avaliação %{trial_plan}"
         other: "Faltam %{count} dias para o término do token de avaliação %{trial_plan}"
-      description: "Você tem acesso a todos os recursos do %{trial_plan}."
+      description: "Você possui acesso a todos os recursos do %{trial_plan}."
     trial:
-      not_found: "Você solicitou um token de avaliação, mas essa solicitação não está mais disponível. Por favor, tente novamente."
-      wait_for_confirmation: "Enviamos um e-mail para confirmar seu endereço para que você possa receber um token de avaliação."
+      not_found: "Você solicitou um token de avaliação, mas esta solicitação não está mais disponível. Tente novamente."
+      wait_for_confirmation: "Enviamos um e-mail para você confirmar seu endereço e assim resgatar um token de avaliação."
       already_retrieved: >
-        Seu token de avaliação Enterprise já foi enviado. Verifique seus e-mails para encontrar o token em anexo. Caso precise de um novo, entre em contato com nossa equipe de suporte.
-      successfully_saved: "Seu token de avaliação Enterprise foi recuperado com sucesso."
+        Seu token de avaliação Enterprise já foi resgatado. Verifique seus e-mails, pois o token está anexado. Entre em contato com nossa equipe de suporte se precisar de um novo.
+      successfully_saved: "Seu token de avaliação Enterprise foi resgatado com sucesso."
       token_sent: "Token de avaliação solicitado"
       request_again: "Solicitar novamente"
       resend_action: "Reenviar e-mail de confirmação"
       welcome_title: "Visão geral rápida dos recursos"
-      welcome_description: "Tenha uma visão rápida sobre gerenciamento de projetos e colaboração em equipe com a edição Enterprise do OpenProject."
+      welcome_description: "Obtenha uma visão geral sobre gestão de projetos e colaboração em equipe com a edição Enterprise do OpenProject."
       confirmation_info: >
-        Enviamos um e-mail em %{date} para %{email} com todas as informações para iniciar a avaliação gratuita do OpenProject Enterprise. Por favor, verifique sua caixa de entrada e clique no link de confirmação para começar seu período de avaliação gratuito de 14 dias.
+        Enviamos um e-mail em %{date} para %{email} com todas as informações para iniciar a avaliação gratuita do OpenProject Enterprise. Verifique sua caixa de entrada e clique no link de confirmação fornecido para começar seu teste gratuito de 14 dias.
       confirmation_subline: >
-        Por favor, verifique sua caixa de entrada e siga os passos para iniciar seu período de avaliação gratuito de 14 dias.
-      domain_caption: O token será válido para o nome do host configurado atualmente.
+        Verifique sua caixa de entrada e realize as etapas para iniciar sua avaliação gratuita de 14 dias.
+      domain_caption: O token será válido apenas para o nome de host configurado no momento.
       receive_newsletter_html: >
         Quero receber a <a target="_blank" href="https://www.openproject.org/newsletter/">boletim informativo</a> do OpenProject.
       consent_html: >
@@ -2589,7 +2589,7 @@ pt-BR:
         none_enabled: "Nenhum modelo foi ativado para este tipo de pacote de trabalho"
       footer_center:
         label: Texto do rodapé
-        caption: Este texto aparecerá em todas as páginas à direita do rodapé.
+        caption: Este texto aparecerá centralizado no rodapé de todas as páginas.
       footer_right:
         label: Texto do rodapé
         caption: Este texto aparecerá em todas as páginas à direita do rodapé.
@@ -2620,8 +2620,8 @@ pt-BR:
     include_sub_items: "Incluir subitens"
     no_results_text: "Sem resultados"
   toggle_switch:
-    label_on: "On"
-    label_off: "Off"
+    label_on: "Ativado"
+    label_off: "Desativado"
   general_csv_decimal_separator: "."
   general_csv_encoding: "UTF-8"
   general_csv_separator: ","
@@ -2648,15 +2648,15 @@ pt-BR:
         header: "Leia sobre novos recursos e atualizações do produto."
         learn_about: "Saiba mais sobre todos os novos recursos"
         #We need to include the version to invalidate outdated translations in other locales
-        "16_5":
+        "16_6":
           new_features_title: >
             A versão contém diversos novos recursos e melhorias, como:
           new_features_list:
-            line_0: Adicione pacotes de trabalho a uma seção da reunião na aba Reuniões.
-            line_1: Escolha o modo de cor de forma mais prática com as caixas de seleção "Aumentar contraste".
-            line_2: Filtrar projetos pela última atualização.
-            line_3: Ir para os elementos de destino destacados a partir dos links diretos.
-            line_4: Confira as ações críticas com caixas de diálogo de perigo mais acessíveis.
+            line_0: Valores calculados para avaliação e pontuação do projeto (complemento Enterprise).
+            line_1: Hierarquia de tipos de atributos do projeto.
+            line_2: Atualizações de desempenho com grande impacto.
+            line_3: Nova página de índice para o módulo Documentos.
+            line_4: Possibilidade de alterar o item pai de um campo personalizado.
     links:
       upgrade_enterprise_edition: "Atualizar para a edição Enterprise"
       postgres_migration: "Migrando sua instalação para PostgreSQL"
@@ -2981,7 +2981,7 @@ pt-BR:
   label_duplicate: "duplicado"
   label_duplicates: "Duplicados"
   label_edit: "Editar"
-  label_edit_attribute: "Edit attribute"
+  label_edit_attribute: "Editar atributo"
   label_edit_x: "Editar: %{x}"
   label_enable_multi_select: "Alterna para seleção múltipla"
   label_enabled_project_custom_fields: "Campos personalizados habilitados"
@@ -3227,8 +3227,8 @@ pt-BR:
   label_permissions: "Permissões"
   label_permissions_report: "Relatório de permissões"
   label_personalize_page: "Personalizar esta página"
-  label_placeholder_user: "Usuário do espaço reservado"
-  label_placeholder_user_new: "Nomo usuário do espaço reservado"
+  label_placeholder_user: "Usuário de espaço reservado"
+  label_placeholder_user_new: "Nomo usuário de espaço reservado"
   label_placeholder_user_plural: "Usuários de espaço reservado"
   label_planning: "Planejamento"
   label_please_login: "Por favor, efetue o login"
@@ -3408,7 +3408,7 @@ pt-BR:
   label_user_search: "Busca por usuário"
   label_user_settings: "Configurações do usuário"
   label_users_settings: "Configurações de usuário"
-  label_value_x: "Value: %{x}"
+  label_value_x: "Valor: %{x}"
   label_version_new: "Nova versão"
   label_version_edit: "Editar versão"
   label_version_plural: "Versões"
@@ -3747,7 +3747,7 @@ pt-BR:
   #Default format for numbers
   number:
     format:
-      delimiter: "."
+      delimiter: ","
       precision: 3
       separator: "."
     human:
@@ -3821,9 +3821,9 @@ pt-BR:
   permission_edit_wiki_pages: "Editar páginas wiki"
   permission_export_work_packages: "Exportar pacotes de trabalho"
   permission_export_wiki_pages: "Exportar páginas wiki"
-  permission_invite_members_by_email: "Invite members by email"
+  permission_invite_members_by_email: "Convidar membros por e-mail"
   permission_invite_members_by_email_explanation: >
-    Allows users to invite new members by email. Invited users will receive an email with a link to set their password and activate their account. Depends on the permission to manage members
+    Permite que usuários convidem novos membros por e-mail. Os usuários convidados receberão um e-mail com um link para definir sua senha e ativar a conta. Depende da permissão para gerenciar membros
   permission_list_attachments: "Lista de anexos"
   permission_log_own_time: "Registrar própria hora"
   permission_log_time: "Registrar hora para outros usuários"
@@ -3853,9 +3853,9 @@ pt-BR:
   permission_share_work_packages: "Compartilhar pacotes de trabalho"
   permission_manage_types: "Selecionar tipos"
   permission_manage_own_reminders: "Criar seus próprios lembretes"
-  permission_view_all_principals: "View all users and groups"
+  permission_view_all_principals: "Visualizar todos os usuários e grupos"
   permission_view_all_principals_explanation: >
-    Allows users to see all users and groups in the system, even if they are not members of any joined projects or groups.
+    Permite que os usuários visualizem todos os usuários e grupos do sistema, mesmo que não sejam membros de nenhum projeto ou grupo do qual façam parte.
   permission_view_project: "Visualizar projetos"
   permission_view_changesets: "Revisões do repositório vistas no OpenProject"
   permission_view_internal_comments: "Visualizar comentários internos"

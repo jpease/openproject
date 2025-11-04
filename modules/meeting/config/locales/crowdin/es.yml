@@ -62,6 +62,7 @@ es:
       meeting_participant:
         invited: "Invitado"
         attended: "Ha asistido"
+        participation_status: "Estado de participación"
     errors:
       models:
         meeting_participant:
@@ -217,7 +218,7 @@ es:
       open_my_meetings_link: "Ir a Mis reuniones"
       series:
         title: "[%{project_name}] Serie de reuniones «%{title}»"
-        summary: "%{actor} has invited you to a new meeting series '%{title}'"
+        summary: "%{actor} te ha invitado a una nueva serie de reuniones «%{title}»"
       series_updated:
         title: "[%{project_name}] Se ha actualizado la serie de reuniones «%{title}»"
         summary: "%{actor} ha actualizado la serie de reuniones «%{title}»"
@@ -271,7 +272,7 @@ es:
         footer_page_numbers: "P. %{current_page} de %{total_pages}"
         author: "Autor"
         date: "Fecha"
-        time: "Hora"
+        time: "Tiempo"
         location: "Ubicación"
         title: "Minutos"
     export_pdf_dialog:
@@ -498,7 +499,7 @@ es:
   label_agenda_item_work_package: "Paquete de trabajo del punto del orden del día"
   label_section_rename: "Renombrar sección"
   label_agenda_outcome: "Resultado"
-  label_agenda_new_outcome: "New outcome"
+  label_agenda_new_outcome: "Nuevo resultado"
   label_agenda_outcome_actions: "Acciones resultantes de la agenda"
   label_agenda_outcome_edit: "Editar resultado"
   label_agenda_outcome_delete: "Eliminar resultado"
@@ -546,7 +547,7 @@ es:
   text_meeting_not_editable_anymore: "Esta reunión ya no es editable."
   text_meeting_not_present_anymore: "Esta reunión ha sido eliminada. Por favor, seleccione otra reunión."
   label_add_work_package_to_meeting_dialog_title: "Seleccionar reunión"
-  label_add_work_package_to_meeting_section_label: "Section"
+  label_add_work_package_to_meeting_section_label: "Sección"
   label_add_work_package_to_meeting_dialog_button: "Añadir a la reunión"
   label_meeting_selection_caption: "Solo es posible añadir este paquete de trabajo a una reunión próxima o en curso."
   label_section_selection_caption: "Elija una sección concreta del orden del día o añádala al backlog."
