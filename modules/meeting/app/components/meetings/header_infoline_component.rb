@@ -35,6 +35,8 @@ module Meetings
       super
       @meeting = meeting
       @series = meeting.recurring_meeting
+
+      # binding.pry
     end
 
     def last_updated_at
