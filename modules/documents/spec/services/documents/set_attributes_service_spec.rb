@@ -33,7 +33,7 @@ require "spec_helper"
 RSpec.describe Documents::SetAttributesService do
   shared_let(:user) { create(:admin) }
   shared_let(:project) { create(:project) }
-  shared_let(:experimental_type) { create(:document_type, :experimental) }
+  shared_let(:doc_type) { create(:document_type) }
 
   current_user { user }
 
@@ -42,7 +42,7 @@ RSpec.describe Documents::SetAttributesService do
       user:,
       model: Document.new,
       contract_class: Documents::BaseContract
-    ).call(type_id: experimental_type.id, title: "A Document", project:)
+    ).call(type_id: doc_type.id, title: "A Document", project:)
   end
 
   describe "#call" do
