@@ -58,6 +58,7 @@ Rails.application.routes.draw do
                controller: "meeting_presentation" do
         collection do
           get :check_for_updates
+          post :start
         end
       end
     end
