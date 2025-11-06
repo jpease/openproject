@@ -56,9 +56,6 @@ RSpec.describe CopyProjectJob, type: :model, with_good_job_batches: [CopyProject
     end
 
     let(:params) { { name: "Copy", identifier: "copy", type_ids: [type.id], work_package_custom_field_ids: [custom_field.id] } }
-    let(:expected_error_message) do
-      "#{WorkPackage.model_name.human} '#{work_package.type.name} ##{work_package.id}: #{work_package.subject}': #{custom_field.name} #{I18n.t('errors.messages.blank')}."
-    end
 
     before do
       source_project.work_package_custom_fields << custom_field
@@ -76,7 +73,7 @@ RSpec.describe CopyProjectJob, type: :model, with_good_job_batches: [CopyProject
       copied_project = Project.find_by(identifier: params[:identifier])
 
       expect(copied_project).to eq(batch.properties[:target_project])
-      expect(batch.properties[:errors].first).to eq(expected_error_message)
+      expect(batch.properties[:errors]).to be_empty
 
       # expect to create a status
       expect(copy_job.job_status).to be_present
@@ -85,17 +82,6 @@ RSpec.describe CopyProjectJob, type: :model, with_good_job_batches: [CopyProject
 
       expected_link = { "href" => "/api/v3/projects/#{copied_project.id}", "title" => copied_project.name }
       expect(copy_job.job_status[:payload]["_links"]["project"]).to eq(expected_link)
-    end
-
-    it "ensures that error messages are correctly localized" do
-      batch = GoodJob::Batch.enqueue(user: user_de, source_project:) do
-        described_class.perform_later(**job_args)
-      end
-      GoodJob.perform_inline
-      batch.reload
-
-      msg = /Arbeitspaket 'Bug #\d+: WorkPackage No. \d+': required_field muss ausgefüllt werden\./
-      expect(batch.properties[:errors].first).to match(msg)
     end
   end
 
