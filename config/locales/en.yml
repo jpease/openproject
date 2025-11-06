@@ -4061,6 +4061,12 @@ en:
   placeholders:
     default: "-"
 
+  program:
+    count:
+      zero: "0 programs"
+      one: "1 program"
+      other: "%{count} programs"
+
   project:
     archive:
       title: "Archive project"
