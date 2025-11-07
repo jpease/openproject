@@ -117,7 +117,7 @@ module Meetings
       if @series.present?
         I18n.t("label_recurring_meeting_copy")
       else
-        I18n.t("button_copy")
+        I18n.t("button_duplicate")
       end
     end
   end
